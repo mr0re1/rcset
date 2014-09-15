@@ -3,7 +3,7 @@ bash-dependencies:
 	r='https://raw.githubusercontent.com/git/git/master/contrib/completion';	\
 	rm -rf "$$r"; mkdir "$$r"; 							\
 	for f in git-completion.bash git-prompt.sh; do 					\
-		wget "$$r"/"$$f" -P "$$p";						\
+		curl "$$r"/"$$f" > "$$p"/"$$f";						\
 	done
 
 bash-install: bash-dependencies
