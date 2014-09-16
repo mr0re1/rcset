@@ -1,7 +1,12 @@
 # Aliases
 
-alias ll='ls -lhG --color=auto'
-alias lla='ls -alhG --color=auto'
+if [[ $OSTYPE == darwin* ]]; then
+  alias ll='ls -lhG'
+  alias lla='ls -alhG'
+else
+  alias ll='ls -lh --color=auto'
+  alias lla='ls -alh --color=auto'
+fi
 
 alias sourcebashrc='source ~/.bashrc'
 
