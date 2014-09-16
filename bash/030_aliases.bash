@@ -1,7 +1,7 @@
 # Aliases
 
-alias ll='ls -lhG'
-alias lla='ls -alhG'
+alias ll='ls -lhG --color=auto'
+alias lla='ls -alhG --color=auto'
 
 alias sourcebashrc='source ~/.bashrc'
 
