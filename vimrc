@@ -1,5 +1,5 @@
 filetype plugin on
-
+:syntax on
 
 "Colors
 set t_Co=256
