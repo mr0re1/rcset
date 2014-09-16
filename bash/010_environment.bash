@@ -7,3 +7,6 @@ if [ -z "$WORKPLACE" ]; then
     [ -d "$C" ] && export WORKPLACE="$C"
   done
 fi
+
+
+[ -d "/usr/local/bin/" ] && export PATH="/usr/local/bin/:$PATH"
