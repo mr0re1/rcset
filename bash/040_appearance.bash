@@ -11,7 +11,7 @@ __prompt_command() {
 
   [ -z $__NAME_COLOR ] && __NAME_COLOR=$_O
 
-  local home=$(readlink -f ~)
+  local home=$(cd ~ && pwd)
   local path=${1:-$(pwd)}
   local pkg=''
 
