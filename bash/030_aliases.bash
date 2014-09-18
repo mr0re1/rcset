@@ -27,3 +27,7 @@ __wp_completition() {
 
 alias wp='__cd_wp'
 complete -o nospace -F __wp_completition wp
+
+
+# vim aliases
+alias vim_sh='vim -c ":set filetype=sh"'  # edit as a shell script (for scripts without extention)
