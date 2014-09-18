@@ -25,13 +25,15 @@ __prompt_command() {
   elif [[ $path == $home* ]]; then
     path="$_R~$_0$(echo $path | sed -e "s#$home##")"
   fi
-  
+
   local status=""
 
   local git_st=$(__git_ps1)
   [ -n "$git_st" ] && status="$status $_G$git_st$_0"
 
   [ -n "$EMR_FLOW_ID" ] && status="$status $_O[$EMR_FLOW_ID]$_0"
+
+  [ -n "$AWS_USER_NAME" ] && status="$status $_R<$AWS_USER_NAME>$_0"
 
   export PS1="$__NAME_COLOR $COMPUTER_NAME$_0 $path $status
 \$ "
