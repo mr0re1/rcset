@@ -31,8 +31,3 @@ complete -o nospace -F __wp_completition wp
 
 # vim aliases
 alias vim_sh='vim -c ":set filetype=sh"'  # edit as a shell script (for scripts without extention)
-
-
-alias g='git'
-__git_complete g __git_main
-

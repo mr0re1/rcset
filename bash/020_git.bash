@@ -6,6 +6,9 @@ export GIT_PS1_SHOWUPSTREAM="auto"
 source $__BASE_DIR/bash/tp/git-completion.bash
 source $__BASE_DIR/bash/tp/git-prompt.sh
 
+alias g='git'
+__git_complete g __git_main
+
 alias gl='git lg'
 alias gs='git status -s'
 alias gd='git diff'
