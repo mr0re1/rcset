@@ -18,6 +18,10 @@ set nowrap
 :match ExtraWhitespace /\s\+$/
 
 
+" Add specific file types
+
 " Hive Query Language
 au BufNewFile,BufRead *.hql set filetype=sql
 
+" Markdown
+au BufRead,BufNewFile *.md set filetype=markdown
