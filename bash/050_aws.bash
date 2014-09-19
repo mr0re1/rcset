@@ -4,7 +4,8 @@ fi
 
 awswhoami() {
   user=$(python2.7 -c 'import boto; \
-print boto.connect_iam().get_user()["get_user_response"]["get_user_result"]["user"]["user_name"]')
+user = boto.connect_iam().get_user()["get_user_response"]["get_user_result"]["user"]; \
+print user["user_name"] if "user_name" in user else user["arn"]')
   echo "$user"
 }
 
@@ -19,3 +20,6 @@ setawscredentials() {
   # TODO: do it in background
   export AWS_USER_NAME=$(awswhoami)
 }
+
+
+alias s3='aws s3'
