@@ -30,4 +30,5 @@ complete -o nospace -F __wp_completition wp
 
 
 # vim aliases
+alias v="vim"
 alias vim_sh='vim -c ":set filetype=sh"'  # edit as a shell script (for scripts without extention)
