@@ -25,3 +25,6 @@ au BufNewFile,BufRead *.hql set filetype=sql
 
 " Markdown
 au BufRead,BufNewFile *.md set filetype=markdown
+
+" Gradle
+au BufRead,BufNewFile *.gradle set filetype=groovy
