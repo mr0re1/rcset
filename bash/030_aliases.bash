@@ -7,6 +7,8 @@ else
   alias ll='ls -lh --color=auto'
   alias lla='ls -alh --color=auto'
 fi
+alias l='ll'
+alias la='lla'
 
 alias sourcebashrc='source ~/.bashrc'
 
