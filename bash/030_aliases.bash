@@ -2,10 +2,10 @@
 
 if [[ $OSTYPE == darwin* ]]; then
   alias ll='ls -lhG'
-  alias lla='ls -alhG'
+  alias lla='ls -AlhG'
 else
   alias ll='ls -lh --color=auto'
-  alias lla='ls -alh --color=auto'
+  alias lla='ls -Alh --color=auto'
 fi
 alias l='ll'
 alias la='lla'
