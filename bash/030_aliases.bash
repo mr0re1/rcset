@@ -10,9 +10,9 @@ fi
 alias l='ll'
 alias la='lla'
 
-alias sourcebashrc='source ~/.bashrc'
-
 alias c='cd'
+
+alias sourcebashrc='source ~/.bashrc'
 
 __cd_wp() {
   cd $WORKPLACE/$1
@@ -35,3 +35,11 @@ complete -o nospace -F __wp_completition wp
 # vim aliases
 alias v="vim"
 alias vim_sh='vim -c ":set filetype=sh"'  # edit as a shell script (for scripts without extention)
+
+# grep aliases
+__grep_py() { grep -RIn "$1" --include="*.py" --color=auto .; }
+alias grpy=__grep_ft
+
+__grep_java() { grep -RIn "$1" --include="*.java" --color=auto .; }
+alias grjava=__grep_java
+
