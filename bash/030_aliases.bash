@@ -12,6 +12,7 @@ alias la='lla'
 
 alias sourcebashrc='source ~/.bashrc'
 
+alias c='cd'
 
 __cd_wp() {
   cd $WORKPLACE/$1
