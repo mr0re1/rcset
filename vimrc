@@ -1,6 +1,9 @@
 filetype plugin on
 :syntax on
 
+call pathogen#infect()
+call pathogen#helptags()
+
 " Colors
 set t_Co=256
 :colorscheme wombat256mod
