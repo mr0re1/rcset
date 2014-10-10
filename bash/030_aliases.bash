@@ -43,3 +43,9 @@ alias grpy=__grep_ft
 __grep_java() { grep -RIn "$1" --include="*.java" --color=auto .; }
 alias grjava=__grep_java
 
+# find alias
+__find_by_name() {
+  local place=${2:-"."}
+  find $place -name "*$1*" 2> /dev/null
+}
+alias fnd=__find_by_name
