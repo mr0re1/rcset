@@ -6,7 +6,8 @@ call pathogen#helptags()
 
 " Colors
 set t_Co=256
-:colorscheme wombat256mod
+set background=dark
+colorscheme solarized
 
 " Indentation
 set expandtab
