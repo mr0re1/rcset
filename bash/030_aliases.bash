@@ -49,3 +49,21 @@ __find_by_name() {
   find $place -name "*$1*" 2> /dev/null
 }
 alias fnd=__find_by_name
+
+
+
+# tools
+__gfm() {
+  local gfm_css=${1:-"$__BASE_DIR/resources/github-markdown.css"}
+  echo "<html>"
+  if [ -f "$gfm_css" ]; then
+    echo "<style>"
+    cat $gfm_css
+    echo ".markdown-body { min-width: 200px; max-width: 790px; margin: 0 auto; padding: 30px; }"
+    echo "</style>"
+  fi
+  echo "<article class='markdown-body'>"
+  curl -X POST https://api.github.com/markdown/raw --data-binary @- -H "Content-type:text/plain"
+  echo "</article></html>"
+}
+alias gfm=__gfm
