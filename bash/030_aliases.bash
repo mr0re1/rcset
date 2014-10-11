@@ -12,6 +12,8 @@ alias la='lla'
 
 alias c='cd'
 
+alias Rm='rm -rf'
+
 alias sourcebashrc='source ~/.bashrc'
 
 __cd_wp() {
