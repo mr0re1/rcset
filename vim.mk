@@ -2,7 +2,8 @@ BUNDLE := \
 	github[derekwyatt/vim-scala] \
 	github[tpope/vim-fugitive] \
 	github[jtratner/vim-flavored-markdown] \
-	github[altercation/vim-colors-solarized]
+	github[altercation/vim-colors-solarized] \
+	github[vim-scripts/mako.vim]
 BUNDLE_DIR := "vim/bundle"
 
 INSTALL_BUNDLE := $(BUNDLE:%=.install-bundle/%)

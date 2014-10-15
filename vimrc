@@ -35,3 +35,6 @@ au BufRead,BufNewFile README.md set filetype=ghmarkdown
 
 " Gradle
 au BufRead,BufNewFile *.gradle set filetype=groovy
+
+" Mako
+au BufRead,BufNewFile *.mako set filetype=mako
