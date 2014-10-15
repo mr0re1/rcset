@@ -11,18 +11,18 @@ install-bundle: $(INSTALL_BUNDLE)
 
 .install-bundle/github[%]:
 	# => Install $*
-	cd $(BUNDLE_DIR) && git clone https://github.com/$*.git
+	@cd $(BUNDLE_DIR) && git clone https://github.com/$*.git -q
 
 install-pathogen:
-	mkdir -p vim/autoload $(BUNDLE_DIR) && \
+	# => Install pathogen
+	@mkdir -p vim/autoload $(BUNDLE_DIR) && \
 	curl -LSso vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 
 vim-dependencies: vim-clean install-pathogen install-bundle
-	mkdir -p vim/colors
-	curl http://www.vim.org/scripts/download_script.php?src_id=13400 > vim/colors/wombat256mod.vim
 
 vim-clean:
-	rm -rf vim/colors vim/autoload $(BUNDLE_DIR)
+	# => Clean vim plugin directories
+	@rm -rf vim/autoload $(BUNDLE_DIR)
 
 vim-install: vim-dependencies
 	[ -f ~/.vimrc ] && mv ~/.vimrc ~/.vimrc.backup || echo "No .vimrc to backup"
