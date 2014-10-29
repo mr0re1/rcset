@@ -30,7 +30,7 @@ set nowrap
 au BufNewFile,BufRead *.hql set filetype=sql
 
 " Markdown
-au BufRead,BufNewFile *.md,*.marksown set filetype=markdown
+au BufRead,BufNewFile *.md,*.markdown set filetype=markdown
 au BufRead,BufNewFile README.md set filetype=ghmarkdown
 
 " Gradle
