@@ -45,6 +45,12 @@ alias grpy=__grep_py
 __grep_java() { grep -RIn "$1" --include="*.java" --color=auto .; }
 alias grjava=__grep_java
 
+__grep_recursive() {
+  local place=${2:-"."}
+  grep -iRIn --color=auto "$1" "$place"
+}
+alias gR=__grep_recursive
+
 # find alias
 __find_by_name() {
   local place=${2:-"."}
