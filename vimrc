@@ -14,8 +14,6 @@ set expandtab
 set shiftwidth=2
 set softtabstop=2
 
-" apply bashrc to vim's shell
-:set shellcmdflag=-ic
 
 set nowrap
 
