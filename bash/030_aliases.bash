@@ -39,15 +39,18 @@ alias v="vim"
 alias vim_sh='vim -c ":set filetype=sh"'  # edit as a shell script (for scripts without extention)
 
 # grep aliases
-__grep_py() { grep -RIn "$1" --include="*.py" --color=auto .; }
+__grep_py() { grep -sRIn "$1" --include="*.py" --color=auto .; }
 alias grpy=__grep_py
 
-__grep_java() { grep -RIn "$1" --include="*.java" --color=auto .; }
+__grep_java() { grep -sRIn "$1" --include="*.java" --color=auto .; }
 alias grjava=__grep_java
+
+__grep_pom() { grep -sRIn "$1" --include="pom.xml" --color=auto .; }
+alias grpom=__grep_pom
 
 __grep_recursive() {
   local place=${2:-"."}
-  grep -iRIn --color=auto "$1" "$place"
+  grep -siRIn --color=auto "$1" "$place"
 }
 alias gR=__grep_recursive
 
