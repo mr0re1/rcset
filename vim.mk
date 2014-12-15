@@ -4,7 +4,8 @@ BUNDLE := \
 	github[jtratner/vim-flavored-markdown] \
 	github[altercation/vim-colors-solarized] \
 	github[vim-scripts/mako.vim] \
-	github[vim-scripts/loremipsum]
+	github[vim-scripts/loremipsum] \
+	github[elzr/vim-json]
 BUNDLE_DIR := "vim/bundle"
 
 INSTALL_BUNDLE := $(BUNDLE:%=.install-bundle/%)
