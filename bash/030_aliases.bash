@@ -78,3 +78,6 @@ __gfm() {
   echo "</article></html>"
 }
 alias gfm=__gfm
+
+
+alias ipynote="ipython notebook"
