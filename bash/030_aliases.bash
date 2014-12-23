@@ -48,6 +48,9 @@ alias grjava=__grep_java
 __grep_pom() { grep -sRIn "$1" --include="pom.xml" --color=auto .; }
 alias grpom=__grep_pom
 
+__grep_sh() { grep -sRIn "$1" --include="*sh" --color=auto .; }
+alias grsh=__grep_sh
+
 __grep_recursive() {
   local place=${2:-"."}
   grep -siRIn --color=auto "$1" "$place"
