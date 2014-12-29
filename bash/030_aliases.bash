@@ -84,3 +84,9 @@ alias gfm=__gfm
 
 
 alias ipynote="ipython notebook"
+
+
+if [[ $OSTYPE == darwin* ]]; then
+  # Remove formating from buffer text
+  alias pbclean='pbpaste | pbcopy'
+fi
