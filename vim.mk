@@ -5,7 +5,8 @@ BUNDLE := \
 	github[altercation/vim-colors-solarized] \
 	github[vim-scripts/mako.vim] \
 	github[vim-scripts/loremipsum] \
-	github[elzr/vim-json]
+	github[elzr/vim-json] \
+	github[puppetlabs/puppet-syntax-vim]
 BUNDLE_DIR := "vim/bundle"
 
 INSTALL_BUNDLE := $(BUNDLE:%=.install-bundle/%)
