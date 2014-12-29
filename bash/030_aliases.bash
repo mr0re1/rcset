@@ -51,6 +51,10 @@ alias grpom=__grep_pom
 __grep_sh() { grep -sRIn "$1" --include="*sh" --color=auto .; }
 alias grsh=__grep_sh
 
+__grep_puppet() { grep -sRIn "$1" --include="*.pp" --color=auto .; }
+alias grpp=__grep_puppet
+
+
 __grep_recursive() {
   local place=${2:-"."}
   grep -siRIn --color=auto "$1" "$place"
