@@ -61,6 +61,8 @@ __grep_recursive() {
 }
 alias gR=__grep_recursive
 
+alias gr='grep --color=auto -iI'
+
 # find alias
 __find_by_name() {
   local place=${2:-"."}
