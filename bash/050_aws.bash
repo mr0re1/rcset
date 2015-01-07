@@ -1,3 +1,5 @@
+#=== DEPRECATED ====
+
 if [ -n "$EMR_HOME" ]; then
   source $__BASE_DIR/bash/tp/bash-emr.sh
 fi
@@ -21,6 +23,13 @@ setawscredentials() {
   export AWS_USER_NAME=$(awswhoami)
 }
 
+#===================
+
+
+
+setawsprofile() {
+  export AWS_DEFAULT_PROFILE="$1"
+}
 
 alias s3='aws s3'
 alias ec2='aws ec2'

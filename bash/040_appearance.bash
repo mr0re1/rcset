@@ -33,7 +33,7 @@ __prompt_command() {
 
   [ -n "$EMR_FLOW_ID" ] && status="$status $_O[$EMR_FLOW_ID]$_0"
 
-  [ -n "$AWS_USER_NAME" ] && status="$status $_R<$AWS_USER_NAME>$_0"
+  [ -n "$AWS_DEFAULT_PROFILE" ] && status="$status $_R<$AWS_DEFAULT_PROFILE>$_0"
 
   export PS1="$__NAME_COLOR $COMPUTER_NAME$_0 $path $status
 \$ "
