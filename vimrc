@@ -26,6 +26,7 @@ set nowrap
 
 " Hive Query Language
 au BufNewFile,BufRead *.hql set filetype=sql
+au BufNewFile,BufRead *.q set filetype=sql
 
 " Markdown
 au BufRead,BufNewFile *.md,*.markdown set filetype=markdown
