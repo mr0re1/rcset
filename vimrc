@@ -25,6 +25,9 @@ set nowrap
 " Add specific file types
 
 " Hive Query Language
+au BufNewFile,BufRead Vagrantfile set filetype=ruby
+
+" Hive Query Language
 au BufNewFile,BufRead *.hql set filetype=sql
 au BufNewFile,BufRead *.q set filetype=sql
 
