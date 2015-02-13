@@ -7,7 +7,8 @@ BUNDLE := \
 	github[vim-scripts/loremipsum] \
 	github[elzr/vim-json] \
 	github[puppetlabs/puppet-syntax-vim] \
-	github[scrooloose/syntastic]
+	github[scrooloose/syntastic] \
+	github[uarun/vim-protobuf]
 BUNDLE_DIR := "vim/bundle"
 
 INSTALL_BUNDLE := $(BUNDLE:%=.install-bundle/%)
