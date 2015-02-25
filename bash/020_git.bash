@@ -9,6 +9,8 @@ source $__BASE_DIR/bash/tp/git-prompt.sh
 alias g='git'
 __git_complete g __git_main
 
-alias gl='git lg'
-alias gs='git status -s'
-alias gd='git diff'
+git_diff_commit() {
+  local difftool=${3:-'vimdiff'}
+  $difftool <(g show $1) <(g show $2)
+}
+alias gdcommit=git_diff_commit
