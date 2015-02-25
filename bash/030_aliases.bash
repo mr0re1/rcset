@@ -54,6 +54,9 @@ alias grsh=__grep_sh
 __grep_puppet() { grep -sRIn "$1" --include="*.pp" --color=auto .; }
 alias grpp=__grep_puppet
 
+__grep_xml() { grep -sRIn "$1" --include="*.xml" --color=auto .; }
+alias grxml=__grep_xml
+
 
 __grep_recursive() {
   local place=${2:-"."}
