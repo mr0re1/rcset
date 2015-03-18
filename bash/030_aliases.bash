@@ -14,6 +14,8 @@ alias c='cd'
 
 alias Rm='rm -rf'
 
+alias jarls='jar -tvf'
+
 alias sourcebashrc='source ~/.bashrc'
 
 __cd_wp() {
