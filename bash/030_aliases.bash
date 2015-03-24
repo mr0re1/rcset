@@ -16,6 +16,18 @@ alias Rm='rm -rf'
 
 alias jarls='jar -tvf'
 
+__jar_fnd() {
+  local ptrn="$1"
+  for jar in $(find . -name "*.jar"); do
+    local res=$(jarls $jar | grep "$ptrn")
+    if [[ -n "$res" ]]; then
+      echo "$jar:"
+      echo "$res"
+    fi
+  done
+}
+alias jarfnd=__jar_fnd
+
 alias sourcebashrc='source ~/.bashrc'
 
 __cd_wp() {
