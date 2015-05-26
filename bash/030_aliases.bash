@@ -113,3 +113,6 @@ if [[ $OSTYPE == darwin* ]]; then
   # Remove formating from buffer text
   alias pbclean='pbpaste | pbcopy'
 fi
+
+
+alias mvnskiptests='mvn -DskipTests=true'
