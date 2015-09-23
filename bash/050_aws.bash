@@ -33,3 +33,4 @@ setawsprofile() {
 
 alias s3='aws s3'
 alias ec2='aws ec2'
+alias edp='aws datapipeline'
