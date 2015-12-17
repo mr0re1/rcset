@@ -37,6 +37,8 @@ __prompt_command() {
 
   [ -n "$AWS_DEFAULT_PROFILE" ] && status="$status $_R<$AWS_DEFAULT_PROFILE>$_0"
 
+  [ -n "$VIRTUAL_ENV" ] && status="$status $_B@$(basename $VIRTUAL_ENV)$_0"
+
   export PS1="$__NAME_COLOR $COMPUTER_NAME$_0 $path $status
 \$ "
 }
