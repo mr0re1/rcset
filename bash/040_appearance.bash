@@ -1,12 +1,11 @@
 export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
 
-
-_R="\e[38;5;160m"
-_G="\e[38;5;70m"
-_B="\e[38;5;104m"
-_O="\e[38;5;208m"
-_0="\e[0m"
+_R="\[\e[38;5;160m\]"
+_G="\[\e[38;5;70m\]"
+_B="\[\e[38;5;104m\]"
+_O="\[\e[38;5;208m\]"
+_0="\[\e[0m\]"
 
 _HOME=$(cd ~ && pwd)
 
@@ -39,8 +38,7 @@ __prompt_command() {
 
   [ -n "$VIRTUAL_ENV" ] && status="$status $_B@$(basename $VIRTUAL_ENV)$_0"
 
-  export PS1="$__NAME_COLOR $COMPUTER_NAME$_0 $path $status
-\$ "
+  export PS1="$__NAME_COLOR $COMPUTER_NAME$_0 $path $status\n$ "
 }
 
 export PROMPT_COMMAND="__prompt_command"
