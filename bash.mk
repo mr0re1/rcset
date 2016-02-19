@@ -2,7 +2,7 @@ TP :="bash/tp"
 
 bash-dependencies:
 	r='https://raw.githubusercontent.com/git/git/master/contrib/completion';	\
-	rm -rf "$$r"; mkdir "$$r"; 							\
+	rm -rf "$(TP)"; mkdir "$(TP)"; 							\
 	for f in git-completion.bash git-prompt.sh; do 					\
 		curl "$$r"/"$$f" > $(TP)/"$$f";						\
 	done
