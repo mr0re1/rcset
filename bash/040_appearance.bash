@@ -22,6 +22,8 @@ __prompt_command() {
     if [[ -n $pkg ]]; then
       path=$(echo $path | sed -e "s#$pkg/*##")
       path="$_G$pkg$_0 $path"
+    else
+      path="$_G*$_0"
     fi
   elif [[ $path == $_HOME* ]]; then
     path="$_R~$_0$(echo $path | sed -e "s#$_HOME##")"
