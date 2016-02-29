@@ -105,9 +105,7 @@ __gfm() {
 }
 alias gfm=__gfm
 
-
-alias ipynote="ipython notebook"
-
+alias ipynote="jupyter notebook"
 
 if [[ $OSTYPE == darwin* ]]; then
   # Remove formating from buffer text
