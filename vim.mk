@@ -9,7 +9,8 @@ BUNDLE := \
 	github[puppetlabs/puppet-syntax-vim] \
 	github[scrooloose/syntastic] \
 	github[uarun/vim-protobuf] \
-	github[ryanss/vim-hackernews]
+	github[ryanss/vim-hackernews] \
+	github[mr0re1/tla.vim]
 BUNDLE_DIR := "vim/bundle"
 
 INSTALL_BUNDLE := $(BUNDLE:%=.install-bundle/%)
